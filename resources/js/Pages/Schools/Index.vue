@@ -49,11 +49,12 @@
                         <thead class="thead-light font-size-11">
                             <tr>
                                 <th style="width: 2%;"></th>
-                                <th style="width: 48%;">Name</th>
-                                <th style="width: 15%;" class="text-center">Class</th>
-                                <th style="width: 15%;" class="text-center">Term</th>
-                                <th style="width: 15%;" class="text-center">Grading</th>
-                                <th style="width: 5%;" class="text-center">Status</th>
+                                <th style="width: 50%;">Name</th>
+                                <th style="width: 12%;" class="text-center">Class</th>
+                                <th style="width: 12%;" class="text-center">Term</th>
+                                <th style="width: 12%;" class="text-center">Grading</th>
+                                <th style="width: 7%;" class="text-center">Status</th>
+                                <th style="width: 5%;"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -70,9 +71,13 @@
                                 <td class="text-center">{{list.class}}</td>
                                 <td class="text-center">{{list.term}}</td>
                                 <td class="text-center">{{list.grading}}</td>
-                                <td class="text-end">
+                                <td class="text-center">
                                     <span v-if="list.status == 'active'" class="badge bg-success">{{list.status}}</span>
                                     <span v-else class="badge bg-danger">{{list.status}}</span>
+                                </td>
+                                <td class="text-end">
+                                    <a class="me-3 text-warning" @click="edit(list)"><i class='bx bx-edit-alt' ></i></a>
+                                    <a class="text-danger"><i class='bx bx-trash'></i></a>
                                 </td>
                             </tr>
                         </tbody>

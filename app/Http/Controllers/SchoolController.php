@@ -19,19 +19,21 @@ class SchoolController extends Controller
             $keyword = $info->keyword;
 
             $data = SchoolListResource::collection(
-                SchoolCampus::with('school','school.term','school.grading','school.class')
-                ->with('municipality.province.region')
+                SchoolCampus::with('school','school.class')
+                ->with('municipality.province.region','term','grading')
                 ->when($info->keyword, function ($query, $keyword) {
                     $query->where('campus', 'LIKE', "%{$keyword}%")
                     ->orWhereHas('school',function ($query) use ($keyword) {
                         $query->where('name', 'LIKE', "%{$keyword}%");
                     });
                 })
+                ->when($info, function ($query,$info) {
+                    ($info->term == null) ? '' : $query->where('term_id',$info->term);
+                    ($info->grading == null) ? '' : $query->where('grading_id',$info->grading);
+                })
                 ->whereHas('school',function ($query) use ($keyword,$info) {
                     $query->where(function ($query) use ($info) {
-                        ($info->term == null) ? '' : $query->where('term_id',$info->term);
                         ($info->class == null) ? '' : $query->where('class_id',$info->class);
-                        ($info->grading == null) ? '' : $query->where('grading_id',$info->grading);
                         $query->orderBy('name','DESC');
                     });
                     $query->orderBy('name','DESC');

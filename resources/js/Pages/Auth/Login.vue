@@ -9,7 +9,7 @@
 
                         <div class="row mb-3">
                             <div class="col-2">
-                                <img src="images/dost.png" alt="" class="avatar-sm">
+                                <img src="images/sei.png" alt="" class="avatar-sm">
                             </div>
                             <div class="col-10">
                                 <div class="text-primary mt-1">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <p class="text-center">© DOST PORTAL <i class='bx bxs-heart text-danger'></i> 2021</p>
+        <p class="text-center">© <a href="https://rjumli.com" target="_blank">STSIMS</a> <i class='bx bxs-heart text-danger'></i> 2021</p>
     </div>
 </div>
 </template>

@@ -3764,7 +3764,7 @@ var _hoisted_5 = {
 };
 var _hoisted_6 = ["onSubmit"];
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row mb-3\"><div class=\"col-2\"><img src=\"images/dost.png\" alt=\"\" class=\"avatar-sm\"></div><div class=\"col-10\"><div class=\"text-primary mt-1\"><p>Department of Science &amp; Technology <br>Region IX - Official Communication Portal</p></div></div></div>", 1);
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row mb-3\"><div class=\"col-2\"><img src=\"images/sei.png\" alt=\"\" class=\"avatar-sm\"></div><div class=\"col-10\"><div class=\"text-primary mt-1\"><p>Department of Science &amp; Technology <br>Region IX - Official Communication Portal</p></div></div></div>", 1);
 
 var _hoisted_8 = {
   "class": "form-group mb-2"
@@ -3830,7 +3830,10 @@ var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 
 var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("© DOST PORTAL "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("© "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "https://rjumli.com",
+  target: "_blank"
+}, "STSIMS"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "bx bxs-heart text-danger"
 }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" 2021")], -1
 /* HOISTED */

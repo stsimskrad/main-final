@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('list_benefits', function (Blueprint $table) {
+        Schema::create('list_privileges', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->tinyIncrements('id');
             $table->string('name')->unique();
             $table->string('type');
-            $table->decimal('amount',12,2);
-            $table->boolean('is_summer');
+            $table->decimal('regular_amount',12,2);
+            $table->decimal('summer_amount',12,2);
             $table->boolean('is_fixed');
             $table->boolean('is_active')->default(1);
-            $table->json('information');
+            $table->boolean('is_reimburseable')->default(0);
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('list_benefits');
+        Schema::dropIfExists('list_privileges');
     }
 };

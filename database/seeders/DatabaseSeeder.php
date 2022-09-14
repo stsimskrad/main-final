@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LocationBarangaysTableSeeder::class);
         $this->call(ListDropdownsTableSeeder::class);
         $this->call(ListAgenciesTableSeeder::class);
-        $this->call(ListBenefitsTableSeeder::class);
+        $this->call(ListPrivilegesTableSeeder::class);
         $this->call(ListCoursesTableSeeder::class);
         $this->call(ListExpensesTableSeeder::class);
         $this->call(ListProgramsTableSeeder::class);

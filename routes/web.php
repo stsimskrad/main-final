@@ -9,6 +9,7 @@ Route::resource('users', App\Http\Controllers\UserController::class);
 Route::resource('addresses', App\Http\Controllers\AddressController::class);
 Route::resource('agencies', App\Http\Controllers\AgencyController::class);
 Route::resource('programs', App\Http\Controllers\ProgramController::class);
+Route::resource('privileges', App\Http\Controllers\PrivilegeController::class);
 Route::resource('expenses', App\Http\Controllers\ExpenseController::class);
 Route::resource('courses', App\Http\Controllers\CourseController::class);
 Route::resource('schools', App\Http\Controllers\SchoolController::class);

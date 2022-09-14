@@ -50,6 +50,15 @@ export const menuItems = [{
         user: ['Super Administrator'],
     },
     {
+        id: 66,
+        label: "Privileges",
+        icon: "bx-wallet",
+        link: "/privileges",
+        component: "Privileges/Index",
+        name: "Privileges",
+        user: ['Super Administrator'],
+    },
+    {
         id: 7,
         label: "Expenses",
         icon: "bx-credit-card-alt",

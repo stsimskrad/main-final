@@ -62,6 +62,10 @@ class ProgramController extends Controller
             'data' => ($data['data'] != '') ? new DefaultResource($data['data']) : '',
             'type' => $data['type']
         ]);
-        
+    }
+
+    public function api(){
+        $data = ListProgram::all();
+        return $data;
     }
 }

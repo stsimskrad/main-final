@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use Hashids\Hashids;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class SchoolListResource extends JsonResource
@@ -14,20 +15,27 @@ class SchoolListResource extends JsonResource
      */
     public function toArray($request)
     {
+        $hashids = new Hashids('krad',10);
+        $code = $hashids->encode($this->id);
         // return parent::toArray($request);
         return [
             'id' => $this->id,
+            'code' => $code,
             'name' => ucwords(strtolower($this->school->name)),
             'campus' => ucwords(strtolower($this->campus)),
-            'grading' => $this->grading->name,
-            'term' => $this->term->name,
-            'class' => $this->school->class->name,
-            'region' => $this->municipality->province->region->region,
-            'province' => $this->municipality->province->name,
-            'municipality' => $this->municipality->name,
+            'shortcut' => $this->shortcut,
+            'address' => $this->address,
+            'grading' => $this->grading,
+            'term' => $this->term,
+            'avatar' => $this->school->avatar,
+            'class' => $this->school->class,
+            'region' => $this->municipality->province->region,
+            'province' => $this->municipality->province,
+            'municipality' => $this->municipality,
             'status' => ($this->is_active) ? 'active' : 'inactive',
             'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at
+            'updated_at' => $this->updated_at,
+            'courses' => ($this->courses != null) ? $this->courses : ''
         ];
     }
 }

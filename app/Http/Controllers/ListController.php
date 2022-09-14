@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ListCourse;
 use Illuminate\Http\Request;
 use App\Models\LocationProvince;
 use App\Models\LocationMunicipality;

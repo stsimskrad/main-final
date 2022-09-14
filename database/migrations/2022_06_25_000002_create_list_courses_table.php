@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('abbreviation')->nullable();
             $table->string('others')->default('n/a')->nullable();
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }

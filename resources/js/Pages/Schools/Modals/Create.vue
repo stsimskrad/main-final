@@ -1,5 +1,5 @@
 <template>
-    <b-modal @ok="create($event)"  v-model="showModal" size="lg" :title="(!editable) ? 'New School' : 'Update School'" no-close-on-backdrop centered>
+    <b-modal @ok="create($event)"  v-model="showModal" size="lg" title="New School" no-close-on-backdrop centered>
         <b-form class="customform">
             <div class="row mt-2" v-if="!showNow">
                 <div class="col-md-12">
@@ -244,28 +244,6 @@ import Multiselect from '@suadelabs/vue3-multiselect';
                         this.errors = this.$page.props.errors;
                     }
                 });
-
-                //  this.form = this.$inertia.form({
-                //     name: this.name,
-                //     shortcut: this.shortcut,
-                // })
-
-                //  this.form.post('/schools',{
-                //         preserveScroll: true,
-                //         onSuccess: (response) => {
-                //             this.hide();
-                //         }
-                //     });
-            },
-
-            edit(data) {
-                this.form.id = data.id;
-                this.form.name = data.name;
-                this.form.others = data.others;
-                this.form.is_sub = (data.is_sub == 1) ? true : false;
-                this.form.is_active = (data.is_active == 1) ? true : false;
-                this.form.editable = true;
-                this.showModal = true;
             },
 
             hide(){

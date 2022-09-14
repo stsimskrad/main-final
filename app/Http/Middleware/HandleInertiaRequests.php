@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\Models\ListDropdown;
 use App\Models\ListExpense;
+use App\Models\ListCourse;
 use App\Models\LocationRegion;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
@@ -50,6 +51,7 @@ class HandleInertiaRequests extends Middleware
             'expenses' => ListExpense::all(),
             'dropdowns' => ListDropdown::all(),
             'regions' => LocationRegion::all(),
+            'course' => ListCourse::all(),
         ]);
     }
 }

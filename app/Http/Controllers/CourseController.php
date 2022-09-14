@@ -61,6 +61,10 @@ class CourseController extends Controller
             'data' => ($data['data'] != '') ? new DefaultResource($data['data']) : '',
             'type' => $data['type']
         ]);
-        
+    }
+
+    public function api(){
+        $data = ListCourse::all();
+        return $data;
     }
 }

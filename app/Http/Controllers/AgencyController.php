@@ -62,6 +62,10 @@ class AgencyController extends Controller
             'data' => ($data['data'] != '') ? new DefaultResource($data['data']) : '',
             'type' => $data['type']
         ]);
-        
+    }
+
+    public function api(){
+        $data = ListAgency::all();
+        return $data;
     }
 }

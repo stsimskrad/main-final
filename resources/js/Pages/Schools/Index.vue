@@ -66,23 +66,24 @@
                                 </td>
                                 <td>
                                     <h5 class="font-size-13 mb-0 text-dark">{{list.name }} - {{list.campus }}</h5>
-                                    <p class="font-size-12 text-muted mb-0">{{list.municipality }}, {{list.province }}, {{list.region }}</p>
+                                    <p class="font-size-12 text-muted mb-0">{{list.municipality.name }}, {{list.province.name }}, {{list.region.region }}</p>
                                 </td>
-                                <td class="text-center">{{list.class}}</td>
-                                <td class="text-center">{{list.term}}</td>
-                                <td class="text-center">{{list.grading}}</td>
+                                <td class="text-center">{{list.class.name}}</td>
+                                <td class="text-center">{{list.term.name}}</td>
+                                <td class="text-center">{{list.grading.name}}</td>
                                 <td class="text-center">
                                     <span v-if="list.status == 'active'" class="badge bg-success">{{list.status}}</span>
                                     <span v-else class="badge bg-danger">{{list.status}}</span>
                                 </td>
                                 <td class="text-end">
                                     <a class="me-3 text-warning" @click="edit(list)"><i class='bx bx-edit-alt' ></i></a>
-                                    <a class="text-danger"><i class='bx bx-trash'></i></a>
+                                    <Link :href="`/schools/${list.code}`" class="text-info"><i class='bx bxs-show'></i></Link>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <Edit :regions="regions" :terms="terms" :gradings="gradings" @info="message" ref="update"/>
                 <Create :regions="regions" :terms="terms" :classes="classes" :gradings="gradings"  @info="message" ref="create"/>
                 <FilterLocation :regions="regions"  @status="message" ref="location"/>
             </div>
@@ -91,6 +92,7 @@
 
 </template>
 <script>
+import Edit from './Modals/Edit.vue';
 import Create from './Modals/Create.vue';
 import FilterLocation from './Modals/FilterLocation.vue';
 import Header from "@/Shared/Header.vue";
@@ -98,7 +100,7 @@ import Pagination from "@/Shared/Pagination.vue";
 import _ from 'lodash';
 
 export default {
-    components : { Header, Pagination, FilterLocation, Create },
+    components : { Header, Pagination, FilterLocation, Create, Edit },
     inject:['count2', 'height'],
     props: ['dropdowns','regions'],
     data() {
@@ -190,7 +192,7 @@ export default {
         },
 
         edit(data){
-            this.$refs.create.edit(data);
+            this.$refs.update.show(data);
             this.editable = true;
         },
 

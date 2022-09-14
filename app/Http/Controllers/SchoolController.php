@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Hashids\Hashids;
 use App\Models\School;
 use App\Models\SchoolCampus;
+use App\Models\SchoolCourse;
 use Illuminate\Http\Request;
 use App\Http\Requests\SchoolRequest;
 use App\Http\Resources\SchoolResource;
 use App\Http\Resources\SchoolListResource;
+use App\Http\Resources\School\CourseResource;
 
 class SchoolController extends Controller
 {
@@ -69,33 +72,76 @@ class SchoolController extends Controller
     }
 
     public function store(SchoolRequest $request){
-        $data = \DB::transaction(function () use ($request){
+       
+        if($request->option != 'course'){
             if($request->new == 'false'){
                 $data = School::findOrFail($request->id);
                 $data->campuses()->create($request->all());
                 $id = \DB::getPdo()->lastInsertId();
-                return $data = SchoolCampus::findOrFail($id);
+                $data = new SchoolListResource(SchoolCampus::findOrFail($id));
             }else{
                 $data = School::create($request->all());
                 $data->campuses()->create($request->all());
                 $id = \DB::getPdo()->lastInsertId();
-                return $data = SchoolCampus::findOrFail($id);
+                $data = new SchoolListResource(SchoolCampus::findOrFail($id));
             }
-            // if($request->editable){
-            //     $data = School::findOrFail($request->id);
-            //     $data->update($request->except('editable'));
-            //     return $data;
-            // }else{
-            //     $data = School::create($request->all());
-            //     $data->campuses()->create($request->all());
-            //     return $data;
-            // }
-        });
+            $message = 'School created successfully. Thanks';
+        }else{
+            if($request->editable){
+                $message = 'Course successfully updated. Thanks';
+                $data = SchoolCourse::findOrFail($request->id);
+                $data->update($request->except('editable','option'));
+                $data = SchoolCourse::findOrFail($request->id);
+            }else{
+                $message = 'Course successfully added. Thanks';
+                $data = new CourseResource(SchoolCourse::create($request->all()));
+            }
+        }
 
         return back()->with([
-            'message' => 'School created successfully. Thanks',
-            'data' => new SchoolListResource($data),
+            'message' => $message,
+            'data' => $data,
             'type' => 'bxs-check-circle'
         ]); 
+    }
+
+    public function update(SchoolRequest $request){
+        $data = \DB::transaction(function () use ($request){
+           
+            $data = SchoolCampus::findOrFail($request->id);
+            $data->update($request->all());
+            $data = SchoolCampus::findOrFail($request->id);
+    
+            return [
+                'data' => new SchoolListResource($data),
+                'message' => 'School updated successfully. Thanks',
+                'type' => 'bxs-check-circle'
+            ];
+            
+        });
+    
+        return back()->with([
+            'message' => $data['message'],
+            'data' => ($data['data'] != '') ? $data['data'] : '',
+            'type' => $data['type']
+        ]);
+    }
+
+    public function show($data){
+        $hashids = new Hashids('krad',10);
+        $id = $hashids->decode($data);
+        
+        $data = SchoolCampus::with('school','school.class')
+        ->with('municipality.province.region','term','grading','courses.course')
+        ->where('id',$id)->first();
+        
+        return inertia('Schools/View',[
+            'school' => new SchoolListResource($data)
+        ]);
+    }
+
+    public function api(){
+        $data = School::with('campuses','campuses.courses')->get();
+        return $data;
     }
 }

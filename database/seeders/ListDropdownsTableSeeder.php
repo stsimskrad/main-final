@@ -96,7 +96,7 @@ class ListDropdownsTableSeeder extends Seeder
                 'id' => 9,
                 'name' => 'First Semester',
                 'classification' => 'Semester',
-                'type' => 'n/a',
+                'type' => 'term',
                 'color' => 'n/a',
                 'others' => 'regular',
             ),
@@ -105,7 +105,7 @@ class ListDropdownsTableSeeder extends Seeder
                 'id' => 10,
                 'name' => 'Second Semester',
                 'classification' => 'Semester',
-                'type' => 'n/a',
+                'type' => 'term',
                 'color' => 'n/a',
                 'others' => 'regular',
             ),
@@ -114,7 +114,7 @@ class ListDropdownsTableSeeder extends Seeder
                 'id' => 11,
                 'name' => 'Summer Class',
                 'classification' => 'Semester',
-                'type' => 'n/a',
+                'type' => 'term',
                 'color' => 'n/a',
                 'others' => 'summer',
             ),
@@ -432,6 +432,78 @@ class ListDropdownsTableSeeder extends Seeder
                 'type' => 'n/a',
                 'color' => 'n/a',
                 'others' => '5',
+            ),
+            46 => 
+            array (
+                'id' => 47,
+                'name' => 'First Quarter',
+                'classification' => 'Trimester',
+                'type' => 'term',
+                'color' => 'n/a',
+                'others' => 'regular',
+            ),
+            47 => 
+            array (
+                'id' => 48,
+                'name' => 'Second Quarter',
+                'classification' => 'Trimester',
+                'type' => 'term',
+                'color' => 'n/a',
+                'others' => 'regular',
+            ),
+            48 => 
+            array (
+                'id' => 49,
+                'name' => 'Third Quarter',
+                'classification' => 'Trimester',
+                'type' => 'term',
+                'color' => 'n/a',
+                'others' => 'regular',
+            ),
+            49 => 
+            array (
+                'id' => 50,
+                'name' => 'Summer',
+                'classification' => 'Trimester',
+                'type' => 'term',
+                'color' => 'n/a',
+                'others' => 'summer',
+            ),
+            50 => 
+            array (
+                'id' => 51,
+                'name' => 'First Quarter',
+                'classification' => 'Quarter Term',
+                'type' => 'term',
+                'color' => 'n/a',
+                'others' => 'regular',
+            ),
+            51 => 
+            array (
+                'id' => 52,
+                'name' => 'Second Quarter',
+                'classification' => 'Quarter Term',
+                'type' => 'term',
+                'color' => 'n/a',
+                'others' => 'regular',
+            ),
+            52 => 
+            array (
+                'id' => 53,
+                'name' => 'Third Quarter',
+                'classification' => 'Quarter Term',
+                'type' => 'term',
+                'color' => 'n/a',
+                'others' => 'regular',
+            ),
+            53 => 
+            array (
+                'id' => 54,
+                'name' => 'Fourth Quarter',
+                'classification' => 'Quarter Term',
+                'type' => 'term',
+                'color' => 'n/a',
+                'others' => 'regular',
             ),
         ));
         

@@ -2409,6 +2409,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     type: function type() {
       this.lists = [];
+      this.keyword = '';
     }
   },
   methods: {

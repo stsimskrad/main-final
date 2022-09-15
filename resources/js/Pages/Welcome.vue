@@ -376,6 +376,7 @@
             },
             type() {
                 this.lists = [];
+                this.keyword = '';
             }
         },
 

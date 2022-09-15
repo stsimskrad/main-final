@@ -30,5 +30,5 @@ Route::prefix('01101011 01110010 01100001 01100100')->group(function(){
     Route::get('/agencies', [App\Http\Controllers\AgencyController::class, 'api']);
     Route::get('/expenses', [App\Http\Controllers\ExpenseController::class, 'api']);
     Route::get('/programs', [App\Http\Controllers\ProgramController::class, 'api']);
-    Route::get('/benefits', [App\Http\Controllers\BenefitController::class, 'api']);
+    Route::get('/privileges', [App\Http\Controllers\PrivilegeController::class, 'api']);
 });

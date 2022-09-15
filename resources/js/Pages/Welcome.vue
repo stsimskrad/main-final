@@ -386,22 +386,24 @@
             }, 300),
 
             fetch(page_url) {
-                let location = (Object.keys(this.arr).length == 0) ? '-' : JSON.stringify(this.arr);
-                page_url = page_url || '/search/' + this.type;
-                axios.get(page_url, {
-                        params: {
-                            keyword: this.keyword,
-                            location: location,
-                        }
-                    })
-                    .then(response => {
-                        if (response) {
-                            this.lists = response.data.data;
-                            this.meta = response.data.meta;
-                            this.links = response.data.links;
-                        }
-                    })
-                    .catch(err => console.log(err));
+                if(this.keyword != ''){
+                    let location = (Object.keys(this.arr).length == 0) ? '-' : JSON.stringify(this.arr);
+                    page_url = page_url || '/search/' + this.type;
+                    axios.get(page_url, {
+                            params: {
+                                keyword: this.keyword,
+                                location: location,
+                            }
+                        })
+                        .then(response => {
+                            if (response) {
+                                this.lists = response.data.data;
+                                this.meta = response.data.meta;
+                                this.links = response.data.links;
+                            }
+                        })
+                        .catch(err => console.log(err));
+                }
             },
 
             windowScroll() {

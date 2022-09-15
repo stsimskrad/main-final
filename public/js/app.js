@@ -2419,22 +2419,24 @@ __webpack_require__.r(__webpack_exports__);
     fetch: function fetch(page_url) {
       var _this = this;
 
-      var location = Object.keys(this.arr).length == 0 ? '-' : JSON.stringify(this.arr);
-      page_url = page_url || '/search/' + this.type;
-      axios.get(page_url, {
-        params: {
-          keyword: this.keyword,
-          location: location
-        }
-      }).then(function (response) {
-        if (response) {
-          _this.lists = response.data.data;
-          _this.meta = response.data.meta;
-          _this.links = response.data.links;
-        }
-      })["catch"](function (err) {
-        return console.log(err);
-      });
+      if (this.keyword != '') {
+        var location = Object.keys(this.arr).length == 0 ? '-' : JSON.stringify(this.arr);
+        page_url = page_url || '/search/' + this.type;
+        axios.get(page_url, {
+          params: {
+            keyword: this.keyword,
+            location: location
+          }
+        }).then(function (response) {
+          if (response) {
+            _this.lists = response.data.data;
+            _this.meta = response.data.meta;
+            _this.links = response.data.links;
+          }
+        })["catch"](function (err) {
+          return console.log(err);
+        });
+      }
     },
     windowScroll: function windowScroll() {
       var navbar = document.getElementById("navbar");

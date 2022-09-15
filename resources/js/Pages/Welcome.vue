@@ -1,6 +1,6 @@
 <template>
 
-    <Head title="Welcome DOST Scholars" />
+    <Head title="DOST" />
 
     <body>
         <div>
@@ -45,7 +45,7 @@
                                     <div class="col-10 ms-n4">
                                         <div class="text-white-50">
                                             <h5 class="text-white fw-semibold mb-0 hero-title" style="font-size: 21px;">
-                                                DOST-IX Scholarship Program </h5>
+                                                STSIMS - Science Education Institute </h5>
                                             <p class="font-size-14">Science & Technology Scholarship Information
                                                 Management
                                                 System</p>
@@ -53,67 +53,65 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-md-6">
-                            <div class="text-white-50 mt-n1 float-end text-end">
-                                <h5 class="text-white fw-semibold mb-0 hero-title" style="font-size: 27px;">DOST-IX</h5>
-                                <p class="font-size-14">Department Of Science And Technology - IX</p>
-                            </div>
-                        </div> -->
                         </div>
-
                     </div>
                 </section>
 
-                <section id="about" class="section pt-4 bg-white"><div class="container"><div class="row mt-4"><div class="col-lg-12"><div class="row g-3"><div class="col-lg-4"><div class="card border mini-stats-wid"><div class="card-body"><div class="d-flex flex-wrap"><div class="me-3"><p class="text-muted mb-2">Total Scholars</p> <h5 class="mb-0">1007</h5></div> <div class="avatar-sm ms-auto"><div class="avatar-title bg-light rounded-circle font-size-20 text-success"><i class="bx bx-group"></i></div></div></div></div></div></div><div class="col-lg-4"><div class="card border mini-stats-wid"><div class="card-body"><div class="d-flex flex-wrap"><div class="me-3"><p class="text-muted mb-2">Total Graduates</p> <h5 class="mb-0">651</h5></div> <div class="avatar-sm ms-auto"><div class="avatar-title bg-light rounded-circle font-size-20 text-info"><i class="bx bxs-graduation"></i></div></div></div></div></div></div><div class="col-lg-4"><div class="card border mini-stats-wid"><div class="card-body"><div class="d-flex flex-wrap"><div class="me-3"><p class="text-muted mb-2">Ongoing Scholars</p> <h5 class="mb-0">193</h5></div> <div class="avatar-sm ms-auto"><div class="avatar-title bg-light rounded-circle font-size-20 text-primary"><i class="bx bx-user-circle"></i></div></div></div></div></div></div></div> <div class="row"><div class="card-body"><div class="me-n2 ms-n2"><ul class="list-inline user-chat-nav text-end ms-4 mt-1 dropdown float-end"><li class="list-inline-item d-non d-sm-inline-block" style="margin-right: 50px;"><div class="form-check"><input type="checkbox" id="programs" class="form-check-input"> <label for="programs" class="form-check-label font-size-11">
-                    Sub-Programs</label></div></li> <li class="list-inline-item d-non d-sm-inline-block " style="margin-right: 50px;"><div class="form-check"><input type="checkbox" id="graph" class="form-check-input"> <label for="graph" class="form-check-label font-size-11">
-                    Graphical View</label></div></li></ul> <div class="tabs" id="__BVID__7"><!----><div class=""><ul role="tablist" class="nav nav-pills small bg-light rounded" id="__BVID__7__BV_tab_controls_"><!----><li role="presentation" class="nav-item"><a role="tab" aria-selected="true" aria-setsize="2" aria-posinset="1" href="#" target="_self" class="nav-link active" id="__BVID__8___BV_tab_button__" aria-controls="__BVID__8">Provinces</a></li><li role="presentation" class="nav-item"><a role="tab" tabindex="-1" aria-selected="false" aria-setsize="2" aria-posinset="2" href="#" target="_self" class="nav-link" id="__BVID__10___BV_tab_button__" aria-controls="__BVID__10">Programs</a></li><!----></ul></div><div class="tab-content mt-3" id="__BVID__7__BV_tab_container_"><div role="tabpanel" aria-hidden="false" class="tab-pane active" id="__BVID__8" aria-labelledby="__BVID__8___BV_tab_button__"><p class="card-text"><div class="row ms-n1 me-n1"><div class="col-md-3 g-0 ps-1"><table class="table table-centered table-bordered table-nowrap"><thead class="thead-light"><tr class="font-size-10"><th style="width: 100%;">Province</th></tr></thead> <tbody class="font-size-11"><tr><td class="fw-bold" style="width: 100%; cursor: pointer;">
-                                        Zamboanga Del Norte
-                                    </td></tr><tr><td class="fw-bold" style="width: 100%; cursor: pointer;">
-                                        City of Zamboanga
-                                    </td></tr><tr><td class="fw-bold" style="width: 100%; cursor: pointer;">
-                                        Zamboanga Del Sur
-                                    </td></tr><tr><td class="fw-bold" style="width: 100%; cursor: pointer;">
-                                        Zamboanga Sibugay
-                                    </td></tr> <tr><td class="fw-bold font-size-12 text-success" style="width: 100%;">Total</td></tr></tbody></table></div> <div class="col-md-8 g-0"><table class="table table-centered table-bordered table-nowrap"><thead class="thead-light"><tr class="font-size-10"><th class="text-center" style="width: 13%;">
-                                        RA 7687</th><th class="text-center" style="width: 13%;">
-                                        Ra 10612</th><th class="text-center" style="width: 13%;">
-                                        Merit</th></tr></thead> <tbody class="font-size-11"><tr><td class="text-center" style="width: 13%;">
-                                        504
-                                    </td><td class="text-center" style="width: 13%;">
-                                        86
-                                    </td><td class="text-center" style="width: 13%;">
-                                        19
-                                    </td><!----><!----><!----></tr><tr><td class="text-center" style="width: 13%;">
-                                        306
-                                    </td><td class="text-center" style="width: 13%;">
-                                        54
-                                    </td><td class="text-center" style="width: 13%;">
-                                        20
-                                    </td><!----><!----><!----></tr><tr><td class="text-center" style="width: 13%;">
-                                        6
-                                    </td><td class="text-center" style="width: 13%;">
-                                        1
-                                    </td><td class="text-center" style="width: 13%;">
-                                        0
-                                    </td><!----><!----><!----></tr><tr><td class="text-center" style="width: 13%;">
-                                        0
-                                    </td><td class="text-center" style="width: 13%;">
-                                        0
-                                    </td><td class="text-center" style="width: 13%;">
-                                        0
-                                    </td><!----><!----><!----></tr> <tr><td class="text-center font-size-12 text-success fw-bold" style="width: 13%;">816</td><td class="text-center font-size-12 text-success fw-bold" style="width: 13%;">141</td><td class="text-center font-size-12 text-success fw-bold" style="width: 13%;">39</td><!----><!----><!----></tr></tbody></table></div> <div class="col-md-1 g-0 pe-1"><table class="table table-centered table-bordered table-nowrap"><thead class="thead-light"><tr class="font-size-10"><th class="text-center" style="width: 100%;">Total</th></tr></thead> <tbody class="font-size-11"><tr><td class="fw-bold text-center text-success" style="width: 13%;">609</td></tr><tr><td class="fw-bold text-center text-success" style="width: 13%;">380</td></tr><tr><td class="fw-bold text-center text-success" style="width: 13%;">7</td></tr><tr><td class="fw-bold text-center text-success" style="width: 13%;">0</td></tr> <tr><td class="font-size-12 fw-bold  text-primary text-center" style="width: 100%;">996</td></tr></tbody></table></div></div></p></div> <div role="tabpanel" aria-hidden="true" class="tab-pane" style="display: none;" id="__BVID__10" aria-labelledby="__BVID__10___BV_tab_button__"><p class="card-text"><div class="table-responsive"><table class="table table-centered table-bordered table-nowrap mb-0"><thead class="thead-light"><tr class="font-size-10"><th style="width: 40%;">Name</th> <th class="text-center" style="width: 20%;">Undergraduate</th> <th class="text-center" style="width: 20%;">JLSS</th> <th class="text-center" style="width: 20%;">Total</th></tr></thead></table> <table class="table table-centered table-bordered table-nowrap"><tbody class="font-size-11"><tr><td class="fw-bold" style="width: 40%; cursor: pointer;">
-                                    RA 7687
-                                </td> <td class="text-center" style="width: 20%;">
-                                    752
-                                </td> <td class="text-center" style="width: 20%;">64</td> <td class="fw-bold text-center" style="width: 20%;">816</td></tr><tr><td class="fw-bold" style="width: 40%; cursor: pointer;">
-                                    Ra 10612
-                                </td> <td class="text-center" style="width: 20%;">
-                                    0
-                                </td> <td class="text-center" style="width: 20%;">141</td> <td class="fw-bold text-center" style="width: 20%;">141</td></tr><tr><td class="fw-bold" style="width: 40%; cursor: pointer;">
-                                    Merit
-                                </td> <td class="text-center" style="width: 20%;">
-                                    29
-                                </td> <td class="text-center" style="width: 20%;">10</td> <td class="fw-bold text-center" style="width: 20%;">39</td></tr></tbody></table></div></p></div><!----></div></div> <!----></div></div></div></div></div></div></section>
+                <section id="about" class="section pt-4 bg-white">
+                    <div class="container">
+                        <div class="row mt-4">
+                            <div class="col-lg-12 mt-4">
+                                <div class="row g-3">
+                                    <div class="col-lg-6">
+                                        <div class="card border mini-stats-wid">
+                                            <div class="card-body">
+                                                <div class="d-flex flex-wrap">
+                                                    <div class="me-3">
+                                                        <p class="text-muted mb-1 fw-bold">S&T Undergraduate
+                                                            Scholarships</p>
+                                                        <h6 class="mb-0 text-danger">Appication Closed</h6>
+                                                    </div>
+                                                    <div class="avatar-sm ms-auto">
+                                                        <div
+                                                            class="avatar-title bg-light rounded-circle font-size-20 text-info">
+                                                            <i class="bx bxs-graduation"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-muted border rounded p-3 mt-n3" style="height: 140px;">
+                                            <p class="font-size-12">The S&T Undergraduate Scholarships Program aims to stimulate and entice talented Filipino youths to pursue lifetime productive careers in science and technology and ensure a steady, adequate supply of qualified S&T human resources which can steer the country towards national progress.</p>
+                                         
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="card border mini-stats-wid">
+                                            <div class="card-body">
+                                                <div class="d-flex flex-wrap">
+                                                    <div class="me-3">
+                                                        <p class="text-muted mb-1 fw-bold">Junior-Level Science
+                                                            Scholarships</p>
+                                                        <h6 class="mb-0 text-danger">Appication Closed</h6>
+                                                    </div>
+                                                    <div class="avatar-sm ms-auto">
+                                                        <div
+                                                            class="avatar-title bg-light rounded-circle font-size-20 text-primary">
+                                                            <i class="bx bx-user-circle"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="text-muted border rounded p-3 mt-n3" style="height: 140px;">
+                                            <p class="font-size-12">The Junior Level Science Scholarship (JLSS) Program aims to: provide scholarships that will finance the education of talented and deserving students in their third year of college and who are pursuing degree programs in the areas of science and technology; and ensure a steady, adequate supply of qualified S&T human resources who can steer the country towards national progress.</p>
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <section id="team" class="section">
                     <div class="container">
@@ -264,6 +262,65 @@
                     </div>
                 </section>
 
+                <section id="about" class="section pt-4 bg-white">
+                    <div class="container">
+                        <div class="row mt-4">
+                            <div class="col-lg-12">
+                                <div class="text-center mb-5">
+                                    <div class="small-title">Search / Filter</div>
+                                    <h4>Priority S&T Programs and Study Placement</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="row g-3">
+                                    <div class="col-lg-12">
+
+                                        <div class="input-group mb-2" ref="www">
+                                            <label class="input-group-text bg-light"> <i
+                                                    class='bx bx-search-alt'></i></label>
+                                            <input type="text" class="form-control" style="width: 55%;"
+                                                placeholder="Search..." v-model="keyword" />
+
+                                            <select v-model="type" @change="fetch()" placeholder="Choose type"
+                                                class="form-select" style="width: 100px;">
+                                                <option value="school" selected>School</option>
+                                                <option value="course">Course</option>
+                                            </select>
+                                            <label v-if="type == 'school'" style="cursor: pointer;" @click="openf=openFilter('location')"
+                                                class="input-group-text bg-light"> <i class='bx bxs-map'
+                                                    :class="(Object.keys(this.arr).length > 0) ? 'bx-flashing text-primary' : ''"></i></label>
+                                        </div>
+                                        <div class="table-responsive" v-if="lists.length > 0">
+                                            <ul class="float-end list-inline user-chat-nav text-end mb-0 dropdown">
+                                                <Pagination @fetch="fetch" :links="links" :pagination="meta"/>
+                                            </ul>   
+                                            <h5 class="font-size-13 card-title mt-3 mb-2">List of Schools</h5>
+                                            <table class="table table-nowrap align-middle">
+                                                <tbody>
+                                                    <tr v-for="list in lists" v-bind:key="list.id" style="cursor: pointer;" @click="view(list)">
+                                                        <td class="text-start" style="width: 50px;"><img :src="currentUrl+'/images/'+list.avatar"
+                                                                class="rounded-circle avatar-xs" alt=""></td>
+                                                        <td>
+                                                            <h5 class="font-size-12 m-0 text-dark">{{ list.name }} - {{ list.campus }}</h5>
+                                                        </td>
+                                                        <td class="text-end">
+                                                            {{ list.region.region }}, {{ list.province.name }}, {{ list.municipality.name }}
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div v-else>
+                                            <div v-if="keyword.length > 0" class="alert alert-warning mt-3" role="alert">No record found.</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <footer class="landing-footer">
                     <div class="container">
                         <div class="row">
@@ -276,92 +333,106 @@
                         </div>
                     </div>
                 </footer>
+                <Priority ref="priority"/>
+                <FilterLocation :regions="regions" @status="message" ref="location" />
             </div>
         </div>
     </body>
 </template>
 <script>
-   export default {
-      layout: null,
-      data() {
+    import _ from 'lodash';
+    import FilterLocation from '../Pages/Schools/Modals/FilterLocation.vue';
+    import Priority from './Modals/Priority.vue';
+    import Pagination from "@/Shared/Pagination.vue";
+    export default {
+        layout: null,
+        components: {
+            FilterLocation, Priority, Pagination
+        },
+        props: ['dropdowns', 'regions'],
+        data() {
             return {
-                start: "",
-                end: "",
-                interval: "",
-                days: "",
-                minutes: "",
-                hours: "",
-                seconds: "",
-                starttime: "Nov 5, 2020 15:37:25",
-                endtime: "Dec 31, 2021 16:37:25"
+                currentUrl: window.location.origin,
+                keyword: '',
+                type: 'school',
+                arr: {},
+                lists: [],
+                meta: {},
+                links: {},
             };
         },
+
         created() {
             window.addEventListener("scroll", this.windowScroll);
         },
+
         destroyed() {
             window.removeEventListener("scroll", this.windowScroll);
         },
-        mounted() {
-            this.start = new Date(this.starttime).getTime();
-            this.end = new Date(this.endtime).getTime();
-            // Update the count down every 1 second
-            this.timerCount(this.start, this.end);
-            this.interval = setInterval(() => {
-                this.timerCount(this.start, this.end);
-            }, 1000);
+
+        watch: {
+            keyword(newVal) {
+                this.checkSearchStr(newVal)
+            },
+            type() {
+                this.lists = [];
+            }
         },
+
         methods: {
-         timerCount: function (start, end) {
-               // Get todays date and time
-               var now = new Date().getTime();
+            checkSearchStr: _.debounce(function (string) {
+                this.fetch();
+            }, 300),
 
-               // Find the distance between now an the count down date
-               var distance = start - now;
-               var passTime = end - now;
+            fetch(page_url) {
+                let location = (Object.keys(this.arr).length == 0) ? '-' : JSON.stringify(this.arr);
+                page_url = page_url || '/search/' + this.type;
+                axios.get(page_url, {
+                        params: {
+                            keyword: this.keyword,
+                            location: location,
+                        }
+                    })
+                    .then(response => {
+                        if (response) {
+                            this.lists = response.data.data;
+                            this.meta = response.data.meta;
+                            this.links = response.data.links;
+                        }
+                    })
+                    .catch(err => console.log(err));
+            },
 
-               if (distance < 0 && passTime < 0) {
-                  clearInterval(this.interval);
-                  return;
-               } else if (distance < 0 && passTime > 0) {
-                  this.calcTime(passTime);
-               } else if (distance > 0 && passTime > 0) {
-                  this.calcTime(distance);
-               }
-         },
-         calcTime: function (dist) {
-               // Time calculations for days, hours, minutes and seconds
-               this.days = Math.floor(dist / (1000 * 60 * 60 * 24));
-               this.hours = Math.floor(
-                  (dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-               );
-               this.minutes = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-               this.seconds = Math.floor((dist % (1000 * 60)) / 1000);
-         },
-         windowScroll() {
-               const navbar = document.getElementById("navbar");
-               if (
-                  document.body.scrollTop >= 50 ||
-                  document.documentElement.scrollTop >= 50
-               ) {
-                  navbar.classList.add("nav-sticky");
-               } else {
-                  navbar.classList.remove("nav-sticky");
-               }
-         },
-         toggleMenu() {
-               document.getElementById("topnav-menu-content").classList.toggle("show");
-         },
-         nextSlide() {
-               this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
-         },
-         prevSlide() {
-               this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
-         }
-      }
-   }
+            windowScroll() {
+                const navbar = document.getElementById("navbar");
+                if (
+                    document.body.scrollTop >= 50 ||
+                    document.documentElement.scrollTop >= 50
+                ) {
+                    navbar.classList.add("nav-sticky");
+                } else {
+                    navbar.classList.remove("nav-sticky");
+                }
+            },
+
+            openFilter(type, val = null) {
+                this.$refs[type].set(val);
+                this.editable = type;
+            },
+
+            toggleMenu() {
+                document.getElementById("topnav-menu-content").classList.toggle("show");
+            },
+
+            message(list) {
+                this.arr = list;
+                this.fetch();
+            },
+
+            view(data){
+                this.$refs.priority.set(data);
+            }
+        }
+    }
 
 </script>
-
-
-

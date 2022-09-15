@@ -15,7 +15,7 @@ Route::resource('courses', App\Http\Controllers\CourseController::class);
 Route::resource('schools', App\Http\Controllers\SchoolController::class);
 
 Route::prefix('lists')->group(function(){
-    Route::controller(App\Http\Controllers\ListController::class)->group(function () {
+    Route::controller(App\Http\Controllers\ListController::class)->group(function(){
         Route::get('/provinces/{code}', 'provinces');
         Route::get('/municipalities/{code}', 'municipalities');
         Route::get('/barangays/{code}', 'barangays');
@@ -24,6 +24,12 @@ Route::prefix('lists')->group(function(){
             Route::post('/campuses', 'campuses');
             Route::post('/courses', 'courses');
         });
+    });
+});
+
+Route::prefix('search')->group(function(){
+    Route::controller(App\Http\Controllers\SchoolController::class)->group(function(){
+        Route::get('/{type}', 'search');
     });
 });
 

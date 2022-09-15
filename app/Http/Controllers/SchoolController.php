@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\SchoolRequest;
 use App\Http\Resources\SchoolResource;
 use App\Http\Resources\SchoolListResource;
+use App\Http\Resources\DefaultResource;
+use App\Http\Resources\SchoolPublicResource;
 use App\Http\Resources\School\CourseResource;
 
 class SchoolController extends Controller
@@ -142,6 +144,62 @@ class SchoolController extends Controller
 
     public function api(){
         $data = School::with('campuses','campuses.courses')->get();
+        return $data;
+    }
+
+    public function search(Request $request){
+        $keyword = $request->keyword;
+        if($request->type == 'school'){
+            $location = (!empty(json_decode($request->location))) ? json_decode($request->location) : NULL;
+            $data = SchoolPublicResource::collection(
+                SchoolCampus::with('school','courses.course')
+                ->with('municipality.province.region')
+                ->when($keyword, function ($query, $keyword) {
+                    $query->where('campus', 'LIKE', "%{$keyword}%")
+                    ->orWhereHas('school',function ($query) use ($keyword) {
+                        $query->where('name', 'LIKE', "%{$keyword}%");
+                    });
+                })
+                ->where(function ($query) use ($location) {
+                    if(!empty($location)){
+                        if(property_exists($location, 'municipality')){
+                            $query->where('municipality_code',$location->municipality);
+                        }else if(property_exists($location, 'province')){
+                            $query->whereHas('municipality',function ($query) use ($location) {
+                                $query->whereHas('province',function ($query) use ($location) {
+                                    $query->where('province_code',$location->province);
+                                });
+                            });
+                        }else if(property_exists($location, 'region')){
+                            $query->whereHas('municipality',function ($query) use ($location) {
+                                $query->whereHas('province',function ($query) use ($location) {
+                                    $query->whereHas('region',function ($query) use ($location) {
+                                        $query->where('region_code',$location->region);
+                                    });
+                                });
+                            });
+                        }
+                    }
+                })
+                ->paginate(10)
+                ->withQueryString()
+            );
+        }else{
+            $data = SchoolPublicResource::collection(
+                SchoolCampus::with('school','courses.course')
+                ->with('municipality.province.region')
+                ->when($keyword, function ($query, $keyword) {
+                    $query->whereHas('courses',function ($query) use ($keyword) {
+                        $query->whereHas('course',function ($query) use ($keyword) {
+                            $query->where('name', 'LIKE', "%{$keyword}%");
+                        });
+                    });
+                })
+                ->paginate(10)
+                ->withQueryString()
+            );
+        }
+        
         return $data;
     }
 }

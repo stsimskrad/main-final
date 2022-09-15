@@ -23,7 +23,7 @@
                     <div class="col-xl-12 d-inline-block mb-2">
                         <div class="input-group mb-2" ref="www">
                             <label class="input-group-text bg-light"> <i class='bx bx-search-alt'></i></label>
-                            <input type="text" class="form-control" style="width: 55%;" placeholder="Search..." v-model="keyword" @keyup="fetch()"/>
+                            <input type="text" class="form-control" style="width: 55%;" placeholder="Search..." v-model="keyword"/>
                           
                             <select  v-model="term" @change="fetch()" placeholder="Choose Term Type" class="form-select" :class="(term == null) ? 'text-muted' : ''" style="width: 100px;">
                                 <option :value="null" selected>All Terms</option>

@@ -505,6 +505,24 @@ class ListDropdownsTableSeeder extends Seeder
                 'color' => 'n/a',
                 'others' => 'regular',
             ),
+            54 => 
+            array (
+                'id' => 55,
+                'name' => 'Pending',
+                'classification' => 'Benefit Status',
+                'type' => 'term',
+                'color' => 'info',
+                'others' => 'n/a',
+            ),
+            55 => 
+            array (
+                'id' => 56,
+                'name' => 'Released',
+                'classification' => 'Benefit Status',
+                'type' => 'term',
+                'color' => 'success',
+                'others' => 'n/a',
+            ),
         ));
         
     }

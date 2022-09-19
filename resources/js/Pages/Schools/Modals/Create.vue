@@ -19,20 +19,20 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-2" v-if="showNow">
-                <div class="col-md-8">
+            <div class="row mt-2">
+                <div class="col-md-8" v-if="showNow">
                     <div class="form-group">
                         <label>Name: <span v-if="errors.name" v-text="errors.name" class="haveerror"></span></label>
                         <input type="text" class="form-control" v-model="name">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" v-if="showNow">
                     <div class="form-group">
                         <label>Deped Id: </label>
                         <input type="text" class="form-control" v-model="deped_id">
                     </div>
                 </div>      
-                <div class="col-md-4 mt-2">
+                <div class="col-md-4 mt-2" v-if="showNow">
                     <div class="form-group">
                         <label>Class: <span v-if="errors.class_id" v-text="errors.class_id" class="haveerror"></span></label>
                             <multiselect 
@@ -45,7 +45,7 @@
                         </multiselect>
                     </div>
                 </div>
-                <div class="col-md-4 mt-2">
+                <div v-if="school != '' || showNow == true" :class="(showNow) ? 'col-md-4 mt-2' : 'col-md-6 mt-2'">
                     <div class="form-group">
                         <label>Term type: <span v-if="errors.term_id" v-text="errors.term_id" class="haveerror"></span></label>
                             <multiselect 
@@ -58,7 +58,7 @@
                         </multiselect>
                     </div>
                 </div>
-                <div class="col-md-4 mt-2">
+                <div v-if="school != '' || showNow == true" :class="(showNow) ? 'col-md-4 mt-2' : 'col-md-6 mt-2'">
                     <div class="form-group">
                         <label>Grading System: <span v-if="errors.grading_id" v-text="errors.grading_id" class="haveerror"></span></label>
                             <multiselect 
@@ -223,8 +223,8 @@ import Multiselect from '@suadelabs/vue3-multiselect';
                 (!this.showNow) ? data.append('id', (this.school.id != undefined) ? this.school.id : '') : '';
                 (this.showNow) ? data.append('name', (this.name != undefined) ? this.name : '') : '';
                 (this.showNow) ? data.append('class_id', (this.klas.id != undefined) ? this.klas.id : '') : '';
-                (this.showNow) ? data.append('term_id', (this.term.id != undefined) ? this.term.id : '') : '';
-                (this.showNow) ? data.append('grading_id', (this.grading.id != undefined) ? this.grading.id : '') : '';
+                data.append('term_id', (this.term.id != undefined) ? this.term.id : '');
+                data.append('grading_id', (this.grading.id != undefined) ? this.grading.id : '');
                 data.append('region_code', (this.region.code != undefined) ? this.region.code : '');
                 data.append('province_code', (this.province.code != undefined) ? this.province.code : '');
                 data.append('municipality_code', (this.municipality.code != undefined) ? this.municipality.code : '');

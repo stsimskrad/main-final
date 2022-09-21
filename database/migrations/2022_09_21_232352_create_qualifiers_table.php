@@ -38,6 +38,7 @@ return new class extends Migration
             $table->string('barangay_code')->nullable()->constrained();
             $table->foreign('barangay_code')->references('code')->on('location_barangays')->onDelete('cascade');
             $table->json('information');
+            $table->year('year');
             $table->timestamps();
         });
     }

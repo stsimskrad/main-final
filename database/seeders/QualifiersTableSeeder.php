@@ -41,6 +41,7 @@ class QualifiersTableSeeder extends Seeder
                 'spas_id' => 'SPAS-000011',
                 'suffix' => NULL,
                 'updated_at' => '2022-09-22 07:36:35',
+                'year' => 2022
             ),
         ));
         

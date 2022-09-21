@@ -14,7 +14,7 @@ class QualifierController extends Controller
         $data = Qualifier::with('region','province','municipality','barangay')
         ->with('program')
         ->where('region_code',$region_code)
-        ->orderBy('awarded_year','DESC')
+        ->orderBy('year','DESC')
         ->paginate(10)
         ->withQueryString();
         return DefaultResource::collection($data);

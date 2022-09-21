@@ -43,6 +43,18 @@ class ScholarsTableSeeder extends Seeder
                 'status_id' => 31,
                 'updated_at' => '2022-09-21 07:36:03',
             ),
+            2 => 
+            array (
+                'awarded_year' => 2022,
+                'created_at' => '2022-09-22 04:57:38',
+                'id' => 3,
+                'is_undergrad' => 1,
+                'lrn' => '000003',
+                'program_id' => 1,
+                'spas_id' => 'SPAS-000003',
+                'status_id' => 31,
+                'updated_at' => '2022-09-22 04:57:38',
+            ),
         ));
         
         

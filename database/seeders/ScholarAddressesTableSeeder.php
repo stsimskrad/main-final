@@ -43,6 +43,18 @@ class ScholarAddressesTableSeeder extends Seeder
                 'scholar_id' => 2,
                 'updated_at' => '2022-09-21 07:37:14',
             ),
+            2 => 
+            array (
+                'address' => NULL,
+                'barangay_code' => '097332004',
+                'created_at' => '2022-09-22 04:58:16',
+                'id' => 4,
+                'municipality_code' => '097332000',
+                'province_code' => '099300000',
+                'region_code' => '090000000',
+                'scholar_id' => 3,
+                'updated_at' => '2022-09-22 04:58:16',
+            ),
         ));
         
         

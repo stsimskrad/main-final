@@ -45,6 +45,19 @@ class ScholarEducationTableSeeder extends Seeder
                 'school_id' => 176,
                 'updated_at' => '2022-09-21 07:38:59',
             ),
+            2 => 
+            array (
+                'award_id' => NULL,
+                'course_id' => 35,
+                'created_at' => '2022-09-22 04:59:30',
+                'graduated_year' => NULL,
+                'id' => 3,
+                'information' => '[]',
+                'level_id' => 2,
+                'scholar_id' => 3,
+                'school_id' => 183,
+                'updated_at' => '2022-09-22 04:59:30',
+            ),
         ));
         
         

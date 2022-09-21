@@ -49,6 +49,21 @@ class ScholarProfilesTableSeeder extends Seeder
                 'suffix' => NULL,
                 'updated_at' => '2022-09-21 07:39:39',
             ),
+            2 => 
+            array (
+                'birthday' => '1994-03-11',
+                'created_at' => '2022-09-22 05:00:16',
+                'email' => 'robertsnow@yahoo.com',
+                'firstname' => 'Robert',
+                'gender' => '1',
+                'id' => 3,
+                'lastname' => 'Snow',
+                'middlename' => 'B',
+                'mobile' => '09123456111',
+                'scholar_id' => 3,
+                'suffix' => NULL,
+                'updated_at' => '2022-09-22 05:00:16',
+            ),
         ));
         
         

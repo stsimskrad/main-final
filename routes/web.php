@@ -13,6 +13,7 @@ Route::resource('privileges', App\Http\Controllers\PrivilegeController::class);
 Route::resource('expenses', App\Http\Controllers\ExpenseController::class);
 Route::resource('courses', App\Http\Controllers\CourseController::class);
 Route::resource('schools', App\Http\Controllers\SchoolController::class);
+Route::resource('scholars', App\Http\Controllers\ScholarController::class);
 
 Route::prefix('lists')->group(function(){
     Route::controller(App\Http\Controllers\ListController::class)->group(function(){

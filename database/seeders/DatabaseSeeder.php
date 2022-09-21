@@ -50,5 +50,9 @@ class DatabaseSeeder extends Seeder
         $this->call(SchoolsTableSeeder::class);
         $this->call(SchoolCampusesTableSeeder::class);
         $this->call(SchoolCoursesTableSeeder::class);
+        $this->call(ScholarsTableSeeder::class);
+        $this->call(ScholarAddressesTableSeeder::class);
+        $this->call(ScholarEducationTableSeeder::class);
+        $this->call(ScholarProfilesTableSeeder::class);
     }
 }

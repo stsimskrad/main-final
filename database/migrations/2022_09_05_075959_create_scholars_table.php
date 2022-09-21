@@ -15,16 +15,15 @@ return new class extends Migration
     {
         Schema::create('scholars', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('spas_id')->unique()->nullable();
-            $table->string('name');
-            $table->integer('school_id')->unsigned()->nullable();
-            $table->foreign('school_id')->references('id')->on('school_campuses')->onDelete('cascade');
-            $table->integer('course_id')->unsigned()->nullable();
-            $table->foreign('course_id')->references('id')->on('list_courses')->onDelete('cascade');
-            $table->string('municipality_code')->nullable()->constrained();
-            $table->foreign('municipality_code')->references('code')->on('location_municipalities')->onDelete('cascade');
-            $table->json('information');
+            $table->string('lrn')->unique()->nullable();
+            $table->boolean('is_undergrad');
+            $table->tinyInteger('program_id')->unsigned()->index();
+            $table->foreign('program_id')->references('id')->on('list_programs')->onDelete('cascade');
+            $table->tinyInteger('status_id')->unsigned()->index();
+            $table->foreign('status_id')->references('id')->on('list_dropdowns')->onDelete('cascade');
+            $table->year('awarded_year');
             $table->timestamps();
         });
     }

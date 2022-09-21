@@ -10,7 +10,12 @@ class Scholar extends Model
     use HasFactory;
 
     protected $fillable = [
-        'spas_id', 'name', 'school_id', 'course_id', 'municipality_code', 'information'
+        'spas_id',
+        'lrn', 
+        'program_id',
+        'status_id',
+        'awarded_year',
+        'is_undergrad',
     ];
 
     public function endorsement()
@@ -18,20 +23,30 @@ class Scholar extends Model
         return $this->hasOne('App\Models\Endorsement', 'scholar_id');
     } 
 
-    public function school()
+    public function profile()
     {
-        return $this->belongsTo('App\Models\SchoolCampus', 'school_id', 'id');
+        return $this->hasOne('App\Models\ScholarProfile', 'scholar_id');
     }
 
-    public function course()
+    public function address()
     {
-        return $this->belongsTo('App\Models\ListCourse', 'course_id', 'id');
+        return $this->hasOne('App\Models\ScholarAddress', 'scholar_id');
+    }  
+
+    public function education()
+    {
+        return $this->hasOne('App\Models\ScholarEducation', 'scholar_id');
     }
 
-    public function municipality_code()
+    public function status()
     {
-        return $this->hasOne('App\Models\LocationMunicipality', 'municipality_code');
-    } 
+        return $this->belongsTo('App\Models\ListDropdown', 'status_id', 'id');
+    }
+
+    public function program()
+    {
+        return $this->belongsTo('App\Models\ListProgram', 'program_id', 'id');
+    }   
     
     public function getUpdatedAtAttribute($value)
     {

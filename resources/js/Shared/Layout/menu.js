@@ -23,6 +23,15 @@ export const menuItems = [{
         user: ['Super Administrator'],
     },
     {
+        id: 33,
+        label: "Scholars",
+        icon: "bx-user-circle",
+        link: "/scholars",
+        component: "Scholars/Index",
+        name: "Scholars",
+        user: ['Super Administrator'],
+    },
+    {
         id: 4,
         label: "Addresses",
         icon: "bx-map",

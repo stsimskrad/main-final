@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreign('endorsed_to')->references('code')->on('location_regions')->onDelete('cascade');
             $table->string('endorsed_by');
             $table->foreign('endorsed_by')->references('code')->on('location_regions')->onDelete('cascade');
-            $table->integer('scholar_id')->unsigned()->index();
+            $table->bigInteger('scholar_id')->unsigned()->index();
             $table->foreign('scholar_id')->references('id')->on('scholars')->onDelete('cascade');
             $table->smallInteger('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

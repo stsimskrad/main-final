@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+Route::get('/scholars/{code}', [App\Http\Controllers\Api\ScholarController::class, 'index']);
 Route::get('/endorsements/{code}', [App\Http\Controllers\Api\EndorsementController::class, 'index']);
 Route::post('/endorsement/store', [App\Http\Controllers\Api\EndorsementController::class, 'store']);
 Route::post('/endorsement/update', [App\Http\Controllers\Api\EndorsementController::class, 'update']);

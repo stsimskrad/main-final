@@ -69,7 +69,7 @@
                                                     <div class="me-3">
                                                         <p class="text-muted mb-1 fw-bold">S&T Undergraduate
                                                             Scholarships</p>
-                                                        <h6 class="mb-0 text-danger">Appication Closed</h6>
+                                                        <h6 class="mb-0 text-success">Appication Open</h6>
                                                     </div>
                                                     <div class="avatar-sm ms-auto">
                                                         <div

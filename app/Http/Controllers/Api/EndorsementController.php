@@ -12,7 +12,7 @@ class EndorsementController extends Controller
 {
     public function index(Request $request){
         $region_code = $request->code;
-        $data = Endorsement::with('scholar.school.school','scholar.course','region_by','region_to')
+        return $data = Endorsement::with('scholar.school.school','scholar.course','region_by','region_to')
         ->where('is_approved',NULL)
         ->where('endorsed_to', $region_code)->get();
         return EndorsementResource::collection($data);

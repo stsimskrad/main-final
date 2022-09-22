@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Models\Scholar;
+use App\Models\Endorse;
 use App\Models\Endorsement;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -24,7 +24,7 @@ class EndorsementController extends Controller
 
                 \DB::beginTransaction();
                 try {
-                    $data = Scholar::create($request->all());
+                    $data = Endorse::create($request->all());
                     $data->endorsement()->create(array_merge($request->all(),['user_id' => 1]));
                     if($data){
                         \DB::commit() ;

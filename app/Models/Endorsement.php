@@ -15,7 +15,7 @@ class Endorsement extends Model
 
     public function scholar()
     {
-        return $this->belongsTo('App\Models\Scholar', 'scholar_id', 'id');
+        return $this->belongsTo('App\Models\Endorse', 'scholar_id', 'id');
     }
 
     public function region_by()
